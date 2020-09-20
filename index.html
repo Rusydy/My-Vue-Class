@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- development version, includes helpful console warnings -->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- production version, optimized for size and speed -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <link rel="stylesheet" href="index.css">
         <title>Vue First</title>
     </head>
@@ -12,9 +12,14 @@
     <body>
     
         <div id="app">
-            <h1 v-bind:title="menu">{{ title }}</h1>
-            <!-- <p>{{ content }}</p> // first method -->
-            <p v-text="content"></p> <!-- second method -->
+            <ul>
+                <li v-for="todo in items">{{ todo }}</li>
+            </ul>
+
+            <input type="text" v-model="item">
+            <button @click="items.push(item)">Add Item</button>
+
+
         </div>
 
         <script src="index.js"></script>
