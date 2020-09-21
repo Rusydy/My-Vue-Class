@@ -12,13 +12,10 @@
     <body>
     
         <div id="app">
-            <ul>
-                <li v-for="todo in items">{{ todo }}</li>
-            </ul>
 
-            <input type="text" v-model="item">
-            <button @click="items.push(item)">Add Item</button>
-
+            <input type="text" v-model="price">
+            <div>Tax {{ taxFormatted }}</div>
+            <div>Total {{ totalFormatted }}</div>
 
         </div>
 
