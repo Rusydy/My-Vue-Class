@@ -13,9 +13,7 @@
     
         <div id="app">
 
-            <input type="text" v-model="price">
-            <div>Tax {{ moneyFormat(tax) }}</div>
-            <div>Total {{ moneyFormat(total) }}</div>
+            <accordion v-for="item in items" :key="item.id" :item="item"></accordion>
 
         </div>
 
