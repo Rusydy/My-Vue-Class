@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>{{ item.title }}</p>
-        <button @click=" toggle = ! toggle" >Details</button>
+        <button @click=" toggle = ! toggle ">Details</button>
         <p v-if="toggle">{{ item.description }}</p>
     </div>
 </template>
